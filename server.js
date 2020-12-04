@@ -9,13 +9,13 @@ const produtos = require('./produtos')
 const data = require('./data.json')
 
 
-server.use('*', (req, res, next) => {
-  if (req.headers['x-forwarded-proto'] == "https") {
-      next()
-  }else {
-      res.redirect("https://" + req.headers.host + req.originalUrl)
-  }
-})
+// server.use('*', (req, res, next) => {
+//   if (req.headers['x-forwarded-proto'] == "https") {
+//       next()
+//   }else {
+//       res.redirect("https://" + req.headers.host + req.originalUrl)
+//   }
+// })
 server.use(bodyParser.urlencoded({ extended: true }));
 server.use(express.static('public'))
 server.use(cors())
