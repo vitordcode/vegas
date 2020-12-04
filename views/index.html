@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:type" content="website"/>
+    <meta property="og:title" content="Elétrica Vegas - Materias elétricos & utilidades" />
+    <meta name="description" content="Elétrica Vegas - Materias elétricos & utilidades em Votuporanga/São Paulo"/>
+    <meta property="og:url" content="https://www.eletricavegas.com.br/" />
+    <meta property="og:image" content="https://www.eletricavegas.com.br/img/logo.png" />
+
+    <title>Elétrica Vegas - Materias elétricos & utilidades</title>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/img/favicon/site.webmanifest">    
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <section class="section-header">
+        <div class="bg-dark">            
+            <header>
+                <nav>
+                    <a class="logo" href="/">
+                        <img src="/img/logo.png" alt="Logo">
+                    </a>
+    
+                    <ul>
+                        <li>                            
+                            <a href="#produtos">Produtos</a>
+                        </li>
+                        
+                        <li>                            
+                            <a href="#contato">Contato</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+    
+            <div class="container-header">
+                <div class="container">
+                    <div class="content">
+                        <div class="text">
+                            <h5>Bem-vindo(a) à</h5>
+                            <h1>Elétrica <span>Vegas</span></h1>                             
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="midias-sociais">
+                <div class="box-midias">
+                    <a href="https://www.instagram.com/eletricavegas" target="_blank">
+                        <i class="fab fa-instagram" alt="Instagram"></i>
+                    </a>
+                    <a href="https://wa.me/551799113-7696?text=Olá,%20vim%20pelo%20site!" target="_blank">
+                        <i class="fab fa-whatsapp" alt="Whatsapp"></i>
+                    </a>
+                    <a href="https://www.facebook.com/eletricavegas" target="_blank">    
+                        <i class="fab fa-facebook-f" alt="Facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>    
+        
+    <div class="what" id="whats">
+        <div class="container">
+            <h2>Por que ficar ligado em nosso site?</h2>
+            <p>Por aqui você pode retirar seu cupom de desconto <br> sempre que tiver alguma promoção</p>
+            <div class="container-block">
+                <div class="block-what">
+                    <i class="fas fa-bullhorn"></i>
+                    <span>Novidades</span>
+                </div>
+                <div class="block-what">
+                    <i class="fas fa-percentage"></i>
+                    <span>Promoção</span>
+                </div>
+                <div class="block-what">
+                    <i class="fas fa-gift"></i>
+                    <span>Sorteios</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="produtos" id="produtos">
+        <div class="container">
+            <h4>Produtos</h4>
+            <h2>O que encotrará em nossa loja</h2>
+            <p>Produtos dísponíveis somente em nossa loja física</p>
+            <div class="produtos-grid">
+                {% for produto in produtos %}
+                    <div class="produtos-item">
+                        <div class="image">
+                            <img src="{{produto.image}}" alt="">
+                        </div>
+
+                        <div class="text">
+                            <h4>{{produto.title}}</h4>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="promocao" id="promocao">
+        <div class="container">
+            <div class="promocao-grid">
+                <div class="promo-friday">
+                </div>
+                <a id="btnPromocao" href="">Participar</a>
+
+            </div>
+        </div>
+    </section>  
+
+    <section class="bg-modal" id="bg-modal">
+        <div class="modal" >
+            <div class="modal-header">
+                <i id="closeModal" class="fas fa-times"></i>
+            </div>
+
+            <div class="modal-body">
+                <div class="promocao-grid">
+                    <div class="promo-friday">
+                    </div>
+    
+                </div>
+
+                <div class="form-box">
+                    <form class="modalForm" id="modalForm" method="post" autocomplete="off">
+                        <div class="box-form">
+                            <div class="input-block">
+                                <input type="text" placeholder="Nome" id="nameModal" name="name" required>
+                            </div>
+                            <div class="input-block">
+                                <input type="email" placeholder="Email" id="emailModal" name="email" required>
+                            </div>
+                            <div class="input-block">
+                                <input type="text" placeholder="Cidade" id="cityModal" name="city" required>
+                            </div>
+                            <div class="input-block">
+                                <input type="text" onkeyup="phoneMask(event)" placeholder="Telefone" id="numberModal" name="number" required>
+                            </div>
+                        </div>
+                        <button class="btnModal" id="btnModal" type="submit">
+                            <span class="submit">Enviar</span>
+                            <span class="loading"></span>
+                            <span class="check"><i class="fa fa-check"></i></span>
+                        </button>
+                    </form>
+                    <div id="div"></div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="midia-modal">
+                    <a href="https://www.instagram.com/eletricavegas" target="_blank">
+                        <i class="fab fa-instagram" alt="Instagram"></i>
+                    </a>
+                    <a href="https://wa.me/551799113-7696?text=Olá,%20vim%20pelo%20site!" target="_blank">
+                        <i class="fab fa-whatsapp" alt="Whatsapp"></i>
+                    </a>
+                    <a href="https://www.facebook.com/eletricavegas" target="_blank">    
+                        <i class="fab fa-facebook-f" alt="Facebook"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="news-letter">
+        <div class="news-letter-bg">            
+            <div class="grid-news-letter">
+                    <div class="text-left">
+                        <div class="box-text">
+                            <span>Newsletter</span>
+                            <h2>Seja o primeiro a saber de nossas promoções</h2>
+                        </div>
+                    </div>
+    
+                    <form class="input-right" id="input-right" method="post">
+                        <input 
+                            type="text" 
+                            id="whatsapp" 
+                            name="whatsapp" 
+                            placeholder="(00) 00000-0000"
+                            onkeyup="phoneMask(event)"
+                            required >
+                        <button class="btn" id="btn" type="submit">
+                            <span class="submit">Cadastrar</span>
+                            <span class="loading"></span>
+                            <span class="check"><i class="fa fa-check"></i></span>
+                        </button>
+                    </form>             
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="contato">        
+        <div class="contato">
+            <h4>Contato</h4>
+            <h2>Entre em contato, <br> em breve retornaremos</h2>
+            <p>Teve alguma dúvida ou gostaria de falar diretamente conosco? Entre <br> em contato via Whatsapp ou através de nossas redes sociais, se preferir <br> preencha este formulário, em breve retornaremos!</p>
+            <div class="contato-box">
+                <div class="social-box">
+                    <div class="block-media">
+                        <a href="https://www.instagram.com/eletricavegas" target="_blank" >
+                            <i class="fab fa-instagram" alt="Instagram"></i>
+                        </a>
+                    </div>
+
+                    <div class="block-media">
+                        <a href="https://wa.me/551799113-7696?text=Olá,%20vim%20pelo%20site!" target="_blank" >
+                            <i class="fab fa-whatsapp" alt="Whatsapp"></i>
+                        </a>
+                    </div>
+
+                    <div class="block-media">
+                        <a href="https://www.facebook.com/eletricavegas" target="_blank" >
+                            <i class="fab fa-facebook-f" alt="Facebook"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="form-box">
+                    <form class="myForm" id="myForm" method="post" autocomplete="off">
+                        <div class="box-form">
+                            <div class="input-block">
+                                <input type="text" placeholder="Nome" id="name" name="name" required>
+                            </div>
+                            <div class="input-block">
+                                <input type="email" placeholder="Email" id="email" name="email" required>
+                            </div>
+                            <div class="input-block">
+                                <input type="text" placeholder="Cidade" id="city" name="city" required>
+                            </div>
+                            <div class="input-block">
+                                <input type="text" onkeyup="phoneMask(event)" placeholder="Telefone" id="number" name="number" required>
+                            </div>
+                        </div>
+                        <button class="button" id="button" type="submit">
+                            <span class="submit">Enviar</span>
+                            <span class="loading"></span>
+                            <span class="check"><i class="fa fa-check"></i></span>
+                        </button>
+                    </form>
+                    <div id="div"></div>
+                </div>
+
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3739.5021129511383!2d-49.97962158444816!3d-20.4034084584749!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94bd590274858817%3A0x70b9eac0e65f6417!2sAv.%20Em%C3%ADlio%20Arroio%20Hernandes%2C%202132%20-%20Pozzobon%2C%20Votuporanga%20-%20SP%2C%2015503-027!5e0!3m2!1spt-BR!2sbr!4v1603553910962!5m2!1spt-BR!2sbr" width="100%" height="100%" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="logo">
+                    <a href="/">
+                        <img src="/img/logo.png" alt="">
+                    </a>
+                </div>
+
+                <div class="contato-footer">
+
+                    <h4>Contato</h4>
+
+                    <ul>     
+                        <li>
+                            <a href="https://wa.me/551799113-7696?text=Olá,%20vim%20pelo%20site!" target="_blank">
+                                <i class="fab fa-whatsapp"></i>
+                                <p>(17) 99113-7696</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#" target="_blank">
+                                <i class="fas fa-phone-alt"></i>                                
+                                <p>3423-5691</p>
+                            </a>
+                        </li>
+
+    
+                        <li>
+                            <a href="#">
+                                <i class="far fa-envelope"></i>
+                                <p>contato@hotmail.com</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="localizacao">
+                    <h4>Localização</h4>
+
+                    <p>Av. Emilio Arroyo Hernandes, 2132
+                    <br> Pozobom - Votuporanga/SP</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="copy">
+            <p>Todos direitos reservados. Elétrica Vegas 2020</p>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-analytics.js"></script>
+
+    <script>
+        var firebaseConfig = {
+                apiKey: "AIzaSyA7ppZLmBg30JzG-6FqcpO5YsiLcdooUGY",
+                authDomain: "eletrica-vegas.firebaseapp.com",
+                databaseURL: "https://eletrica-vegas.firebaseio.com",
+                projectId: "eletrica-vegas",
+                storageBucket: "eletrica-vegas.appspot.com",
+                messagingSenderId: "125584148009",
+                appId: "1:125584148009:web:39712f05aa6298b526be38",
+                measurementId: "G-5H3H26EGTV"
+            };
+            firebase.initializeApp(firebaseConfig);
+            firebase.analytics();
+    </script>  
+    <script src="/js/script.js"></script>
+</body>
+</html>

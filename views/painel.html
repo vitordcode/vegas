@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {% block title %}
+            <title>Painel - Elétrica Vegas</title>
+        {% endblock title %}
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="/css/painel.css">
+    </head>
+    <body id="body-pd">
+        <header class="header" id="header">
+            <div class="header__toggle">
+                <i class='bx bx-menu' id="header-toggle"></i>
+            </div>
+        </header>
+
+        <div class="l-navbar" id="nav-bar">
+            <nav class="nav">
+                <div>
+                    <a href="/painel" class="nav__logo nav__link active">
+                        <i class='bx bx-layer nav__logo-icon'></i>
+                        <span class="nav__logo-name">Painel</span>
+                    </a>
+
+                    <div class="nav__list">
+                        <a href="/painel/promocao" class="nav__link">
+                        <i class='bx bx-purchase-tag nav__icon' ></i>
+                            <span class="nav__name">Promoção</span>
+                        </a>
+
+                        <a href="/painel/contato" class="nav__link">
+                            <i class='bx bx-user nav__icon' ></i>
+                            <span class="nav__name">Contato</span>
+                        </a>
+                        
+                        <a href="/painel/newsletter" class="nav__link">
+                            <i class='bx bx-message-square-detail nav__icon' ></i>
+                            <span class="nav__name">Newsletter</span>
+                        </a>
+                    </div>
+                </div>
+
+                <a href="/" class="nav__link">
+                    <i class='bx bx-log-out nav__icon' ></i>
+                    <span class="nav__name">Sair</span>
+                </a>
+            </nav>
+        </div>
+        
+        <main class="main">
+            <div class="main__container">
+                <div class="main__box">
+                    <a href="/painel/promocao">
+                        <div class="main__grid">
+                            <div class="main__text">
+                                <p>Página</p>
+                                <h4>Promoção</h4>
+                            </div>
+                            <div class="main__icon">
+                                <span>
+                                    <i class='bx bx-purchase-tag'></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="main__box">
+                    <a href="/painel/contato">
+                        <div class="main__grid">
+                            <div class="main__text">
+                                <p>Página</p>
+                                <h4>Contato</h4>
+                            </div>
+                            <div class="main__icon">
+                                <span>
+                                    <i class='bx bx-user'></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="main__box">
+                    <a href="/painel/newsletter">
+                        <div class="main__grid">
+                            <div class="main__text">
+                                <p>Página</p>
+                                <h4>Newsletter</h4>
+                            </div>
+                            <div class="main__icon">
+                                <span>
+                                    <i class='bx bx-message-square-detail'></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <script src="/js/painel.js"></script>
+    </body>
+</html>

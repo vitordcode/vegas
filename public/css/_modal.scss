@@ -1,0 +1,422 @@
+.bg-modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display:none;
+    justify-content: flex-end;
+    flex:1;
+    top:0;
+    left:0;
+    z-index: 1100;
+    background-color: rgba(#000000, 0.5);
+
+    .modal {
+        width: 0%;
+        height: 100vh;
+        background-color: #FFF;
+        animation: animation .4s ease-in forwards;
+        display:flex;
+        flex-direction: column;
+
+        .modal-header {
+            padding: 0rem;
+
+            i {
+                font-size: 2.2rem;
+                padding: 2rem 2.4rem;
+                cursor: pointer;
+            }
+        }
+
+        .modal-body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            opacity: 0;
+            align-items: center;
+            flex-direction: column;
+            animation: opacity .8s ease-in-out forwards;
+
+            .promocao-grid {
+                background: url('../img/bg-black.svg') no-repeat center center;
+                background-size: cover;
+                width: 100%;
+                height: 38vh;
+                z-index: 101;
+                overflow: hidden;
+                margin: 0 auto;
+                box-sizing: border-box;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+        
+        
+                .promo-friday {
+                    background: url('../img/friday.png') no-repeat center center;
+                    background-size: cover;
+                    width: 60%;
+                    height: 12vh;
+                    z-index: 101;
+                    overflow: hidden;
+                    margin: 0 auto;
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    position: relative;
+                    margin-top: 2rem;
+                }
+            }    
+
+            .form-box {
+                width:100%;
+                height: 100%;
+                align-self: center;
+                display: flex;
+                padding: 1rem 0;
+                margin-top: -5rem;
+                align-items: center;
+                justify-content:center;
+    
+                .modalForm {
+                    width: 80%;
+    
+                    .box-form {
+                        width: 100%;
+                        margin: 0 auto;
+        
+                        .input-block {
+                            width: 80%;
+                            margin: 3rem auto;
+        
+                            input {
+                                width: 100%;
+                                background: transparent;
+                                background-color: transparent!important;
+                                outline: none;
+                                border: none;
+                                padding: 1rem 0;
+                                border-radius:none;
+                                border-bottom: 1px solid #151515;
+                                font-size: 1.6rem;
+                                color: #151515;
+                                
+        
+                                &::placeholder {
+                                    font-size: 1.6rem;
+                                }
+        
+                                &:focus,
+                                &:active,
+                                &:hover {
+                                    background-color: transparent!important;
+                                }
+                            }
+                        }
+                    }
+                    .btnModal {
+                        width: 80%;
+                        margin: 0 auto;
+                        background: linear-gradient(to right,#fa5f1a 0%,   #ff8100 100%);
+                        border-radius: 5px;
+                        text-transform: uppercase;
+                        font-weight: 600;
+                        font-size: 1.6rem;
+                        padding: 2.6rem;
+                        border: none;
+                        outline: none;
+                        color: #FFF;
+                        position: relative;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: center;
+                        overflow: hidden;
+                        margin-bottom: 1rem;
+
+
+                        &:hover {
+                            background: linear-gradient(to left,#fa5f1a 0%,   #ff8100 100%);
+
+                        }
+                    
+                        &:before {
+                            position: absolute;
+                            content: '';
+                            bottom: 0;
+                            left: 0;
+                            width: 0%;
+                            height: 100%;
+                            background: linear-gradient(to left,#fa5f1a 0%,   #ff8100 100%);
+
+                        }
+                    
+                        span {
+                            position: absolute;
+                            line-height: 0;
+                    
+                            i {
+                                transform-origin: center center;
+                                color: #fff;
+                            }
+                    
+                            &:nth-of-type(1) {
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                            &:nth-of-type(2) {
+                                top: 100%;
+                                transform: translateY(0%);
+                                font-size: 24px;
+                            }
+                            &:nth-of-type(3) {
+                                display: none;
+                            }
+                        }
+                    }
+                    .active {
+                        background-color: #fff;
+                    
+                        &:before {
+                            width: 100%;
+                            transition: width 3s linear;
+                        }
+                    
+                        span {
+                    
+                            &:nth-of-type(1) {
+                                top: -100%;
+                                transform: translateY(-50%);
+                            }
+                            &:nth-of-type(2) {
+                                top: 50%;
+                                transform: translateY(-50%);
+                            }
+                            &:nth-of-type(2) {
+                    
+                                i {
+                                    animation: loading 500ms linear infinite;
+                                }
+                            }
+                    
+                            &:nth-of-type(3) {
+                                display: none;
+                            }
+                        }
+                    }
+                    .finished {
+                        background: linear-gradient(to right,#fa5f1a 0%,   #ff8100 100%);
+                    
+                        .submit {
+                            display: none;
+                        }
+                    
+                        .loading {
+                            display: none;
+                        }
+                    
+                        .check {
+                            display: block !important;
+                            font-size: 24px;
+                            animation: scale 0.5s linear;
+                    
+                            i {
+                                transform-origin: center center;
+                            }
+                        }
+                    }
+                    
+                    @keyframes loading {
+                        100% {
+                        transform: rotate(360deg);
+                        }
+                    }
+                    @keyframes scale {
+                        0% {
+                        transform: scale(2);
+                        }
+                        50% {
+                        transform: scale(0.2);
+                        }
+                        70% {
+                        transform: scale(1.2);
+                        }
+                        90% {
+                        transform: scale(0.7);
+                        }
+                        100% {
+                        transform: scale(1);
+                        }
+                    }
+                }                
+            }
+        }
+        .modal-footer {
+            width: 100%;
+            height: 10vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            opacity: 0;            
+            animation: opacity .8s ease-in forwards;
+
+            .midia-modal {
+                width: 30%;
+
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                
+                a {
+                    text-decoration: none;
+
+                    i {
+                        font-size: 2rem;
+                        padding: 2rem;
+                        color: #151515;
+                        transition: .3s ease-in;
+
+                        &:hover {
+                            color: #fa5f1a;
+                        }
+                    }
+
+                    &:nth-child(1) i {
+                        font-size: 2.4rem;
+                    }
+
+                    &:nth-child(2) i {
+                        font-size: 2.4rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.openModal {
+    display: flex;
+    transition: .3s ease-in-out;
+}
+
+@keyframes animation {
+    100% {
+        width: 40%;
+    }
+}
+
+@keyframes opacity {
+    0% {
+        transform: translateX(45rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+@media screen and (min-width: 250px) and (max-width: 575.98px) {
+    .bg-modal {
+        width: 100%;
+        height: 100vh;
+
+        .modal {
+            width: 0%;
+            height: 100%;
+            animation: animation576 .8s ease-in forwards;
+
+            .modal-body {
+
+                h2 {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+
+    @keyframes animation576 {
+        100% {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 576px) and (max-width: 767.98px) {
+    .bg-modal {
+        width: 100%;
+        height: 100%;
+
+        .modal {
+            width: 0%;
+            height: 100%;
+            animation: animation576 .8s ease-in forwards;
+
+            .modal-body {
+
+                h2 {
+                    font-size: 3.4rem;
+                }
+            }
+        }
+    }
+
+    @keyframes animation576 {
+        100% {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 991.98px) {
+    .bg-modal {
+        width: 100%;
+        height: 100%;
+
+        .modal {
+            width: 0%;
+            height: 100%;
+            animation: animation576 .8s ease-in forwards;
+
+            .modal-body {
+
+                h2 {
+                    font-size: 3.4rem;
+                }
+            }
+        }
+    }
+
+    @keyframes animation576 {
+        100% {
+            width: 60%;
+        }
+    }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1199.98px) {
+    .bg-modal {
+        width: 100%;
+        height: 100vh;
+
+        .modal {
+            width: 0%;
+            height: 100%;
+            animation: animation576 .5s ease-in forwards;
+
+            .modal-body {
+
+                h2 {
+                    font-size: 3.6rem;
+                }
+            }
+        }
+    }
+
+    @keyframes animation576 {
+        100% {
+            width: 60%;
+        }
+    }
+}

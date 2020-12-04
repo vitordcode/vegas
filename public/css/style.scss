@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: auto;
+    font-family: Poppins;
+    font-size: 10px; 
+    width: 100%;   
+    margin: auto;
+    position: relative;
+}
+
+.error {
+    border-bottom: 2px solid red;
+}
+
+.hide {
+    display: none;
+}
+.container{
+    padding: 0!important;
+}
+
+
+
+
+@import 'header';
+@import 'what';
+@import 'produtos';
+@import 'promocao';
+@import 'modal';
+@import 'newsLetter';
+@import 'contato';
+@import 'footer';
