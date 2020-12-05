@@ -1191,32 +1191,10 @@ body {
   margin: 15rem 0;
 }
 
-.promocao .container > h4 {
-  text-align: center;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 1.6rem;
-  opacity: .8;
-  color: #fa5f1a;
-}
-
-.promocao .container > h2 {
-  text-align: center;
-  font-size: 5rem;
-  font-weight: 900;
-  margin-bottom: 6rem;
-}
-
-.promocao .promocao-grid {
-  background: url("../img/bg-black.svg") no-repeat center center;
-  background-size: cover;
-  width: 78%;
-  height: 62vh;
-  z-index: 101;
+.promocao .promocao-bg {
+  width: 100%;
   overflow: hidden;
-  margin: 0 auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1230,47 +1208,59 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: -20rem auto 0;
 }
 
-.promocao .promocao-grid .promo-friday {
-  background: url("../img/friday.png") no-repeat center center;
-  background-size: cover;
-  width: 50%;
-  height: 24vh;
-  z-index: 101;
-  overflow: hidden;
-  margin: 0 auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+.promocao .promocao-bg img {
+  width: 80%;
   position: relative;
 }
 
-.promocao .promocao-grid a {
+.promocao .promocao-bg .promocao-text {
+  width: 100%;
+  position: absolute;
+  top: 10rem;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.promocao .promocao-bg .promocao-text img {
+  width: 40%;
+}
+
+.promocao .promocao-bg .promocao-text a {
   margin-top: 5rem;
   color: #FFF;
   font-weight: 600;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
   background: -webkit-gradient(linear, left top, right top, from(#fa5f1a), to(#ff8100));
   background: linear-gradient(to right, #fa5f1a 0%, #ff8100 100%);
   border: none;
-  border-radius: 999px;
-  padding: 18px 32px;
+  border-radius: 5px;
+  padding: 18px 42px;
   -webkit-transition: .3s ease-in-out;
   transition: .3s ease-in-out;
   text-decoration: none;
 }
 
-.promocao .promocao-grid a:hover {
+.promocao .promocao-bg .promocao-text a:hover {
   background: -webkit-gradient(linear, right top, left top, from(#fa5f1a), to(#ff8100));
   background: linear-gradient(to left, #fa5f1a 0%, #ff8100 100%);
   -webkit-transition: .3s ease-in-out;
@@ -1290,16 +1280,10 @@ body {
     max-width: 80%;
     margin: 0 auto 5rem;
   }
-  .promocao .promocao-grid {
-    background: url("../img/bg-black.svg") no-repeat center center;
-    background-size: cover;
+  .promocao .promocao-bg {
     width: 100%;
-    height: 62vh;
-    z-index: 101;
     overflow: hidden;
-    margin: 0 auto;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1313,47 +1297,56 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    margin: 0rem auto 0;
   }
-  .promocao .promocao-grid .promo-friday {
-    background: url("../img/friday.png") no-repeat center center;
-    background-size: cover;
-    width: 60%;
-    height: 12vh;
-    z-index: 101;
+  .promocao .promocao-bg img {
+    width: 120%;
+    position: relative;
+  }
+  .promocao .promocao-bg .promocao-text {
+    width: 100%;
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
     overflow: hidden;
-    margin: 0 auto;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: flex-end;
-    position: relative;
-    margin-top: 2rem;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .promocao .promocao-grid a {
-    margin-top: 2rem;
+  .promocao .promocao-bg .promocao-text img {
+    width: 75%;
+  }
+  .promocao .promocao-bg .promocao-text a {
+    margin-top: 5rem;
     color: #FFF;
     font-weight: 600;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     text-transform: uppercase;
-    background: -webkit-gradient(linear, left top, right top, from(#ff8100), to(#ffbe00));
-    background: linear-gradient(to right, #ff8100 0%, #ffbe00 100%);
+    background: -webkit-gradient(linear, left top, right top, from(#fa5f1a), to(#ff8100));
+    background: linear-gradient(to right, #fa5f1a 0%, #ff8100 100%);
     border: none;
-    border-radius: 999px;
-    padding: 10px 32px;
+    border-radius: 5px;
+    padding: 14px 38px;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
     text-decoration: none;
   }
-  .promocao .promocao-grid a:hover {
-    background: -webkit-gradient(linear, right top, left top, from(#ff8100), to(#ffbe00));
-    background: linear-gradient(to left, #ff8100 0%, #ffbe00 100%);
+  .promocao .promocao-bg .promocao-text a:hover {
+    background: -webkit-gradient(linear, right top, left top, from(#fa5f1a), to(#ff8100));
+    background: linear-gradient(to left, #fa5f1a 0%, #ff8100 100%);
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
   }
@@ -1372,56 +1365,75 @@ body {
     max-width: 80%;
     margin: 0 auto 5rem;
   }
-  .promocao .promocao-grid {
-    display: -ms-grid;
-    display: grid;
-    row-gap: 2rem;
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+  .promocao .promocao-bg {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: -20rem auto 0;
   }
-  .promocao .promocao-grid .box-image {
-    margin: 0 auto;
-    text-align: center;
+  .promocao .promocao-bg img {
+    width: 60%;
+    position: relative;
   }
-  .promocao .promocao-grid .box-image img {
-    width: 65%;
-    color: #0d0c22;
-    margin: 0 auto;
-    text-align: center;
+  .promocao .promocao-bg .promocao-text {
+    width: 100%;
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .promocao .promocao-grid .box-text {
-    text-align: center;
-    margin: 0 auto;
+  .promocao .promocao-bg .promocao-text img {
+    width: 40%;
   }
-  .promocao .promocao-grid .box-text h4 {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #151515;
-    max-width: 55%;
-    margin: 0 auto 2rem;
-    text-align: justify;
-  }
-  .promocao .promocao-grid .box-text a {
-    width: 55%;
-    border: 2px solid #fa5d1a;
-    padding: 1.5rem 3rem;
-    margin: 0 auto;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #fa5d1a;
-    text-decoration: none;
-    cursor: pointer;
-    -webkit-transition: .3s ease;
-    transition: .3s ease;
-    text-transform: uppercase;
-  }
-  .promocao .promocao-grid .box-text a:hover {
-    background-color: #fa5d1a;
-    border: 4px solid #fa5d1a;
+  .promocao .promocao-bg .promocao-text a {
+    margin-top: 5rem;
     color: #FFF;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    background: -webkit-gradient(linear, left top, right top, from(#fa5f1a), to(#ff8100));
+    background: linear-gradient(to right, #fa5f1a 0%, #ff8100 100%);
+    border: none;
+    border-radius: 999px;
+    padding: 18px 32px;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    text-decoration: none;
+  }
+  .promocao .promocao-bg .promocao-text a:hover {
+    background: -webkit-gradient(linear, right top, left top, from(#fa5f1a), to(#ff8100));
+    background: linear-gradient(to left, #fa5f1a 0%, #ff8100 100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
   }
 }
 
@@ -1438,56 +1450,75 @@ body {
     max-width: 80%;
     margin: 0 auto 5rem;
   }
-  .promocao .promocao-grid {
-    display: -ms-grid;
-    display: grid;
-    row-gap: 2rem;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+  .promocao .promocao-bg {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: -20rem auto 0;
   }
-  .promocao .promocao-grid .box-image {
-    margin: 0 auto;
-    text-align: center;
+  .promocao .promocao-bg img {
+    width: 60%;
+    position: relative;
   }
-  .promocao .promocao-grid .box-image img {
-    width: 90%;
-    color: #0d0c22;
-    margin-left: 4rem;
-    text-align: center;
+  .promocao .promocao-bg .promocao-text {
+    width: 100%;
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .promocao .promocao-grid .box-text {
-    text-align: center;
-    margin: 0 auto 0 -.5rem;
+  .promocao .promocao-bg .promocao-text img {
+    width: 40%;
   }
-  .promocao .promocao-grid .box-text h4 {
-    font-size: 1.6rem;
-    font-weight: 600;
-    color: #151515;
-    max-width: 90%;
-    margin: 0 auto 2rem;
-    text-align: justify;
-  }
-  .promocao .promocao-grid .box-text a {
-    width: 90%;
-    border: 2px solid #fa5d1a;
-    padding: 1.3rem 3rem;
-    margin: 0 auto;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #fa5d1a;
-    text-decoration: none;
-    cursor: pointer;
-    -webkit-transition: .3s ease;
-    transition: .3s ease;
-    text-transform: uppercase;
-  }
-  .promocao .promocao-grid .box-text a:hover {
-    background-color: #fa5d1a;
-    border: 4px solid #fa5d1a;
+  .promocao .promocao-bg .promocao-text a {
+    margin-top: 5rem;
     color: #FFF;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    background: -webkit-gradient(linear, left top, right top, from(#fa5f1a), to(#ff8100));
+    background: linear-gradient(to right, #fa5f1a 0%, #ff8100 100%);
+    border: none;
+    border-radius: 999px;
+    padding: 18px 32px;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    text-decoration: none;
+  }
+  .promocao .promocao-bg .promocao-text a:hover {
+    background: -webkit-gradient(linear, right top, left top, from(#fa5f1a), to(#ff8100));
+    background: linear-gradient(to left, #fa5f1a 0%, #ff8100 100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
   }
 }
 
@@ -1504,56 +1535,75 @@ body {
     max-width: 80%;
     margin: 0 auto 5rem;
   }
-  .promocao .promocao-grid {
-    display: -ms-grid;
-    display: grid;
-    row-gap: 2rem;
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
+  .promocao .promocao-bg {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: -20rem auto 0;
   }
-  .promocao .promocao-grid .box-image {
-    margin: 0 auto;
-    text-align: center;
+  .promocao .promocao-bg img {
+    width: 80%;
+    position: relative;
   }
-  .promocao .promocao-grid .box-image img {
-    width: 90%;
-    color: #0d0c22;
-    margin-left: 4rem;
-    text-align: center;
+  .promocao .promocao-bg .promocao-text {
+    width: 100%;
+    position: absolute;
+    top: 10rem;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .promocao .promocao-grid .box-text {
-    text-align: center;
-    margin: 0 auto 0 -.5rem;
+  .promocao .promocao-bg .promocao-text img {
+    width: 40%;
   }
-  .promocao .promocao-grid .box-text h4 {
-    font-size: 1.8rem;
-    font-weight: 600;
-    color: #151515;
-    max-width: 90%;
-    margin: 0 auto 2rem;
-    text-align: justify;
-  }
-  .promocao .promocao-grid .box-text a {
-    width: 90%;
-    border: 2px solid #fa5d1a;
-    padding: 1.3rem 3rem;
-    margin: 0 auto;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: #fa5d1a;
-    text-decoration: none;
-    cursor: pointer;
-    -webkit-transition: .3s ease;
-    transition: .3s ease;
-    text-transform: uppercase;
-  }
-  .promocao .promocao-grid .box-text a:hover {
-    background-color: #fa5d1a;
-    border: 4px solid #fa5d1a;
+  .promocao .promocao-bg .promocao-text a {
+    margin-top: 5rem;
     color: #FFF;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    background: -webkit-gradient(linear, left top, right top, from(#fa5f1a), to(#ff8100));
+    background: linear-gradient(to right, #fa5f1a 0%, #ff8100 100%);
+    border: none;
+    border-radius: 5px;
+    padding: 18px 32px;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    text-decoration: none;
+  }
+  .promocao .promocao-bg .promocao-text a:hover {
+    background: -webkit-gradient(linear, right top, left top, from(#fa5f1a), to(#ff8100));
+    background: linear-gradient(to left, #fa5f1a 0%, #ff8100 100%);
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
   }
 }
 
@@ -1606,6 +1656,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   opacity: 0;
+  overflow: hidden;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1617,16 +1668,10 @@ body {
           animation: opacity .8s ease-in-out forwards;
 }
 
-.bg-modal .modal .modal-body .promocao-grid {
-  background: url("../img/bg-black.svg") no-repeat center center;
-  background-size: cover;
+.bg-modal .modal .modal-body .promocao-bg {
   width: 100%;
-  height: 38vh;
-  z-index: 101;
   overflow: hidden;
-  margin: 0 auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1640,29 +1685,40 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin: -5rem auto 0;
 }
 
-.bg-modal .modal .modal-body .promocao-grid .promo-friday {
-  background: url("../img/friday.png") no-repeat center center;
-  background-size: cover;
-  width: 60%;
-  height: 12vh;
-  z-index: 101;
+.bg-modal .modal .modal-body .promocao-bg img {
+  width: 80%;
+  position: relative;
+}
+
+.bg-modal .modal .modal-body .promocao-bg .promocao-text {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
   overflow: hidden;
-  margin: 0 auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  position: relative;
-  margin-top: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bg-modal .modal .modal-body .promocao-bg .promocao-text img {
+  width: 40%;
 }
 
 .bg-modal .modal .modal-body .form-box {
@@ -1674,7 +1730,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   padding: 1rem 0;
-  margin-top: -5rem;
+  margin-top: -15rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -2030,8 +2086,54 @@ body {
     -webkit-animation: animation576 .8s ease-in forwards;
             animation: animation576 .8s ease-in forwards;
   }
-  .bg-modal .modal .modal-body h2 {
-    font-size: 3rem;
+  .bg-modal .modal .modal-body .promocao-bg {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: -5rem auto 0;
+  }
+  .bg-modal .modal .modal-body .promocao-bg img {
+    width: 100%;
+    position: relative;
+  }
+  .bg-modal .modal .modal-body .promocao-bg .promocao-text {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .bg-modal .modal .modal-body .promocao-bg .promocao-text img {
+    width: 60%;
   }
   @-webkit-keyframes animation576 {
     100% {
